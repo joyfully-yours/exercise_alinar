@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="hi"> </p>
+    <script>
+        
+        var a = prompt("Please enter the length of the first side:", '0');
+        var b = prompt("Please enter the length of the second side:", '0');
+        var c = prompt("Please enter the length of the third side" , '0');
+
+        var check = checkTri(a,b,c);
+
+
+        function checkTri(a,b,c){
+            a = Number(a);
+            b = Number(b);
+            c = Number(c);
+
+            if(isNaN(a) || isNaN(b) || isNaN(c))
+            {
+                window.alert("Invalid input. Please input valid numbers.");
+            }
+
+            else{
+                window.alert("input:  " + a + "  " + b + "  " + c)
+
+                var output = determineTriangle(a, b, c);
+
+                function determineTriangle (a, b, c) {
+                    if(a == b && b == c)
+                        {
+                            window.alert("The triangle is EQUILATERAL");
+                        }
+                    else if(a != b && b == c || a == b && b != c || a == c && b!= c || a!= c && b == c )
+                        {
+                            window.alert("The triangle is ISOSCELES");
+                        }
+                    else{
+                            window.alert("The triangle is SCALENE");
+                        }
+}
+            }
+        }
+
+       
+
+
+    </script>
+
+
+
+</body>
+</html>
